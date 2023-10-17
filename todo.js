@@ -21,9 +21,10 @@ addTodoBtn.addEventListener("click", () => {
   if (text.length == 0) {
     alertText.innerText = "Input must not be empty";
     alertText.setAttribute("class", "alertAnimation");
+    //Timeout function that waits 900ms before removing class of alertText
     setTimeout(() => {
       alertText.setAttribute("class", "");
-    }, 800);
+    }, 900);
 
     return;
   } else {
