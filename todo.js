@@ -21,6 +21,10 @@ addTodoBtn.addEventListener("click", () => {
   if (text.length == 0) {
     alertText.innerText = "Input must not be empty";
     alertText.setAttribute("class", "alertAnimation");
+    setTimeout(() => {
+      alertText.setAttribute("class", "");
+    }, 800);
+
     return;
   } else {
     alertText.innerText = "";
