@@ -8,19 +8,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="todo.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>My ToDo</h1>
+    <div id="wrapper">
+      <div id="topContainer">
+        <h1 id="title">My ToDo</h1>
         <p id="todoCount">0 completed</p>
 
-        <div class="inputField">
+        <div id="inputField">
           <input id="inputBar" type="text" />
           <a id="addTodoBtn">OK</a>
         </div>
-        <p id="alert"></p>
-      </header>
+        <p id="alertMsg"></p>
+      </div>
 
-      <main></main>
+      <div id="todoContainer"></div>
     </div>
 
     <script src="todo.js"></script>
