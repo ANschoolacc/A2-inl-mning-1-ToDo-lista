@@ -7,11 +7,11 @@ const todoCount = document.querySelector("#todoCount");
 
 let completed = 0;
 
-const todoList = document.querySelector("main");
+const todoList = document.querySelector("#todoContainer");
 
 const addTodoBtn = document.querySelector("#addTodoBtn");
 
-const alertText = document.querySelector("#alert");
+const alertText = document.querySelector("#alertMsg");
 
 //The main codeblock, click event to make + button add input into list
 addTodoBtn.addEventListener("click", () => {
@@ -33,12 +33,16 @@ addTodoBtn.addEventListener("click", () => {
   }
   //Declaration of variables inside scope that creates elements in HTML
   const container = document.createElement("article");
+  container.setAttribute("class", "todoItem");
 
   const trash = document.createElement("a");
   trash.innerHTML = "&#x1F5D1;";
+  trash.setAttribute("class", "trashIcon");
 
   const todoItem = document.createElement("li");
   todoItem.innerText = text;
+  todoItem.setAttribute("class", "todoText");
+
   //Variable to get text from li to use in functions
   let todoText = todoItem.innerText;
   //Adding childelements to article element
@@ -57,9 +61,9 @@ addTodoBtn.addEventListener("click", () => {
 
   //Click event for li element. Checks if  li element has a class and adds if not.
   todoItem.addEventListener("click", () => {
-    if (todoItem.getAttribute("class") == "checked") {
+    if (todoItem.getAttribute("id") == "checked") {
       //Sets li element class to nothing
-      todoItem.setAttribute("class", "");
+      todoItem.setAttribute("id", "");
       //Retracts 1 from finished todo
       completed--;
 
@@ -67,7 +71,7 @@ addTodoBtn.addEventListener("click", () => {
       changeStatus(todoText, false);
     } else {
       //Sets li element class to checked
-      todoItem.setAttribute("class", "checked");
+      todoItem.setAttribute("id", "checked");
       //Adds 1 to finished todos
       completed++;
 
