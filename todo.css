@@ -10,7 +10,7 @@ body {
   user-select: none;
 }
 
-.wrapper {
+#wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ body {
   }
 }
 
-h1 {
+#topContainer > #title {
   text-align: center;
   font-size: 65px;
 
@@ -71,7 +71,7 @@ h1 {
   animation-delay: 1s;
 }
 
-#todoCount {
+#topContainer > #todoCount {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -86,7 +86,7 @@ h1 {
   animation-delay: 1.1s;
 }
 
-.inputField {
+#topContainer > #inputField {
   font-family: Arial, Helvetica, sans-serif;
 
   border-radius: 3px;
@@ -97,7 +97,7 @@ h1 {
   animation-delay: 1.2s;
 }
 
-#inputBar {
+#inputField > #inputBar {
   font-size: 26px;
 
   width: 300px;
@@ -111,7 +111,7 @@ h1 {
   cursor: text;
 }
 
-.inputField a {
+#inputField > #addTodoBtn {
   font-size: 26px;
 
   background-color: rgb(240, 239, 239);
@@ -123,15 +123,15 @@ h1 {
   margin-left: 4px;
 }
 
-.inputField a:hover {
+#inputField > #addTodoBtn:hover {
   background-color: rgba(221, 220, 220, 0.828);
 }
 
-.inputField a:active {
+#inputField > #addTodoBtn:active {
   background-color: rgb(240, 239, 239);
 }
 
-#alert {
+#alertMsg {
   color: rgb(212, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -166,7 +166,7 @@ h1 {
   }
 }
 
-article {
+#todoContainer > .todoItem {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,29 +192,29 @@ article {
   }
 }
 
-article li {
+.todoItem > .todoText {
   list-style: none;
   margin-right: 15px;
   cursor: pointer;
   overflow-wrap: anywhere;
 }
 
-li:hover {
+.todoItem > .todoText:hover {
   text-decoration: line-through;
 }
 
-article a {
+.todoItem > .trashIcon {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.297);
   transition: 0.3s;
   cursor: pointer;
 }
 
-article a:hover {
+.todoItem > .trashIcon:hover {
   color: rgba(0, 0, 0, 0.588);
 }
 
-.checked {
+#checked {
   text-decoration: line-through;
   animation: grayOut 0.3s forwards;
 }
